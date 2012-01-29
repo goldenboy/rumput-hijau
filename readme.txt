@@ -26,6 +26,11 @@ Activiation and Use
 1. Activate the Theme through the 'Themes' menu in WordPress
 2. See Appearance -> Rumput Hijau Theme Options
 
+== License Information ==
+
+License: 		GNU General Public License v3
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+
 == Changelog ==
 
 = 1.0.0 [2012.01.29] =

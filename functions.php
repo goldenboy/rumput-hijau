@@ -25,7 +25,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'automatic-feed-links' );    // Add default posts and comments RSS feed links to head
 	add_custom_background(); // Add custom background functions
 	add_editor_style( 'extra-style/editor-style.css' );
-	add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+	// add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 	
 }
 
