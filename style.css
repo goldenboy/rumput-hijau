@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Rumput Hijau
 Theme URI:		http://satrya.me/demo/rumput-hijau/
-Description: 	Clean and SEO optimized theme, microformats structure, breadcrumbs ready, 2 different layouts, 7 font stack, custom menu, custom header, custom body background, wordpress thumbnail and custom logo & favicon uploader. Compatible with WordPress 3.3 and above, valid XHTML & CSS, sticky posts, widget-ready, fullwidth page ready, threaded comments ready & translation ready
+Description: 	Clean and SEO optimized theme, microformats structure, breadcrumbs ready, 2 different layouts, 7 font stack, custom menu, custom header, custom body background, wordpress thumbnail and custom logo & favicon uploader. Compatible with WordPress 3.3 and above, sticky posts, widget-ready, fullwidth page ready, threaded comments ready & translation ready
 Version: 		1.0.0
 Author: 		Satrya
 Author URI: 	http://satrya.me
@@ -74,7 +74,6 @@ body {
   border-top: 5px solid #333;
   color: #111;
   font-size: 13px;
-  *font-size: small;
   line-height: 23px;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -114,6 +113,7 @@ Layout
 
 #primary-nav {
   background-color: #73870a;
+  color: inherit;
   margin-bottom: 30px;
 }
 #primary-nav .inside-primary-nav {
@@ -498,6 +498,7 @@ input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
   background: #fff;
+  color: inherit;
 }
 
 textarea {
@@ -625,10 +626,12 @@ input[type="checkbox"] {
 Links
 ============================================================================= */
 a {
+  background-color: inherit;
   color: #73870A;
   text-decoration: none;
 }
 a:visited {
+  background-color: inherit;
   color: #73870A;
 }
 a:hover {
@@ -838,9 +841,6 @@ Header
 }
 
 /* =============================================================================
-Primary Navigation
-============================================================================= */
-/* =============================================================================
 Entry Content
 ============================================================================= */
 #main-content .big-image {
@@ -867,7 +867,7 @@ Entry Content
   margin-bottom: 50px;
 }
 #main-content .sticky {
-  background: #333;
+  background-color: #333;
   border-top: 5px solid #73870A;
   padding: 18px 20px;
   color: #fff;
@@ -881,6 +881,15 @@ Entry Content
   width: 100%;
 }
 #main-content .sticky a {
+  background-color: inherit;
+  color: #fff;
+}
+#main-content .sticky .post-pages a {
+  background: #73870A;
+  color: #fff;
+}
+#main-content .sticky .post-pages a:hover {
+  background: #333;
   color: #fff;
 }
 
@@ -903,6 +912,7 @@ Entry Content
   margin-bottom: 10px;
 }
 .content-right .entry-title a:hover {
+  background-color: inherit;
   color: #333;
   text-decoration: none;
 }
@@ -1148,12 +1158,12 @@ Comments
   line-height: 28px;
 }
 
-#commentform input.txt,
+#commentform input
 #commentform textarea {
   border: 1px solid #ddd;
 }
 
-#commentform input.txt {
+#commentform input {
   display: inline;
   float: left;
   clear: both;
@@ -1177,7 +1187,7 @@ Comments
   display: inline-block;
 }
 .reply a {
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #DDD;
   cursor: pointer;
   color: #333;
@@ -1264,10 +1274,12 @@ cite.fn {
   padding-top: 0;
 }
 cite.fn a {
+  background-color: inherit;
   color: #333;
   text-decoration: none;
 }
 cite.fn a:hover {
+  background-color: inherit;
   color: #333;
   text-decoration: none;
 }
@@ -1291,24 +1303,28 @@ span.says {
   background: #ffffff;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+  color: inherit;
   margin-top: 40px;
 }
 .commentlist li.depth-3 {
   background: #fafafa;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+  color: inherit;
   margin-top: 40px;
 }
 .commentlist li.depth-4 {
   background: #ffffff;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+  color: inherit;
   margin-top: 40px;
 }
 .commentlist li.depth-5 {
   background: #fafafa;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
+  color: inherit;
   margin-top: 40px;
 }
 .commentlist code {
@@ -1341,6 +1357,7 @@ span.says {
   padding: 3px;
   border: 1px solid #e9e9e9;
   background: #fff;
+  color: inherit;
 }
 .commentlist .comment-meta {
   display: inline;
@@ -1401,11 +1418,13 @@ Footer
 ============================================================================= */
 #footer {
   background-color: #73870A;
+  color: inherit;
   border-bottom: 5px solid #333;
   color: #fff;
   height: 50px;
 }
 #footer a {
+  background-color: inherit;
   color: #fff;
 }
 #footer a:hover {
@@ -1520,17 +1539,20 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
   overflow-x: hidden;
 }
 .sf-menu a {
+  background-color: inherit;
   padding: 10px 15px;
   text-decoration: none;
   /* visited pseudo selector so IE6 applies text colour*/
   color: #fff;
 }
 .sf-menu a:visited {
+  background-color: inherit;
   /* visited pseudo selector so IE6 applies text colour*/
   color: #fff;
 }
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
   background: #333;
+  color: #fff;
   outline: 0;
 }
 .sf-menu a.sf-with-ul {
@@ -1540,15 +1562,19 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu li li {
   background: #333;
+  color: #fff;
 }
 .sf-menu li li a:hover {
   background-color: #444;
+  color: #fff;
 }
 .sf-menu li li li {
   background: #333;
+  color: #fff;
 }
 .sf-menu li:hover, .sf-menu li.sfHover, .sf-menu li.current_page_item a {
   background: #333;
+  color: #fff;
   outline: 0;
 }
 
@@ -1598,9 +1624,6 @@ li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator {
   /* arrow hovers for modern browsers*/
 }
 
-/* =============================================================================
-Advertisement
-============================================================================= */
 /* =============================================================================
 Miscellaneous
 ============================================================================= */
@@ -1739,6 +1762,7 @@ Miscellaneous
 }
 .inner-author-wrap .author-photo img {
   background: #fff;
+  color: inherit;
   padding: 3px;
   border: 1px solid #ddd;
 }
