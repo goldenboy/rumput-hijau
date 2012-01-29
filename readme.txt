@@ -11,7 +11,7 @@ Description: Clean and SEO optimized theme, microformats structure, breadcrumbs 
 
 Manual installation:
 
-1. Download the `rumput-hijau` theme from [here](https://github.com/satryabima/rumput-hijau/zipball/master)
+1. Download the `rumput-hijau` theme from https://github.com/satryabima/rumput-hijau/zipball/master
 2. Upload the `rumput-hijau.zip` to the `/wp-content/themes/` directory
 
 Installation using "Add New Theme"
