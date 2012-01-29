@@ -335,7 +335,7 @@ function rumputhijau_theme_options_render_page() {
 							<div class="inside">
 								<ul class="links">
 									<li><a href="http://satrya.me" target="_blank"><?php _e('Rumput Hijau by Satrya', 'rumputhijau'); ?></a></li>
-									<li><a href="https://github.com/satryabima/rumputhijau-Wordpress-Theme" target="_blank"><?php _e('Rumput Hijau on github', 'rumputhijau'); ?></a></li>
+									<li><a href="https://github.com/satryabima/rumput-hijau" target="_blank"><?php _e('Rumput Hijau on github', 'rumputhijau'); ?></a></li>
 									<li><a href="http://twitter.com/satryaWp" target="_blank"><?php _e('Follow me @satryaWp', 'rumputhijau'); ?></a></li>
 								</ul>
 							</div>
