@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Rumput Hijau 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-29 20:56+0700\n"
-"PO-Revision-Date: 2012-01-29 20:57+0700\n"
+"PO-Revision-Date: 2012-01-29 21:43+0700\n"
 "Last-Translator: Satrya <satryabima24@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -38,17 +38,9 @@ msgstr ""
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:16
-msgid "F Y"
-msgstr ""
-
 #: archive.php:18
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr ""
-
-#: archive.php:18
-msgid "Y"
 msgstr ""
 
 #: archive.php:20
@@ -130,11 +122,6 @@ msgstr ""
 #: image.php:16
 #, php-format
 msgid "Return to %s"
-msgstr ""
-
-#: image.php:16
-#, php-format
-msgid "%s"
 msgstr ""
 
 #: image.php:30

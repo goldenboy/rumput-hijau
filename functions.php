@@ -10,7 +10,7 @@ require_once get_template_directory() . '/functions/rumputhijau_theme_enqueue.ph
 require_once get_template_directory() . '/functions/rumputhijau_theme_functions.php'; // theme functions
 require_once get_template_directory() . '/functions/rumputhijau_theme_extensions.php'; // theme extensions
 require_once get_template_directory() . '/options/rumputhijau_options.php'; // get theme options
-// require_once get_template_directory() . '/includes/metabox/metabox-image.php'; // get custom meta box
+require_once get_template_directory() . '/includes/metabox/metabox-image.php'; // get custom meta box
 
 
 ################################################################################
@@ -73,10 +73,5 @@ function rumputhijau_admin_header_style() { ?>
 <?php
 }
 add_custom_image_header('', 'rumputhijau_admin_header_style');
-
-
-################################################################################
-// Add custom meta box
-################################################################################
 
 ?>
