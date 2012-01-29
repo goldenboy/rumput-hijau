@@ -13,6 +13,15 @@
 		
 	<div id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 		
+		<?php 
+		$img = get_post_meta(get_the_ID(), 'rumputhijau_meta_box_input_image', true);
+		if($img != ""):
+		?>
+			<span class="big-image">
+				<img title="<?php the_title(); ?>" src="<?php echo $img; ?>" />
+			</span>
+		<?php endif; ?>
+		
 		<div class="content-right">
 		
 			<h1 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'rumputhijau' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>

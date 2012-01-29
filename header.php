@@ -84,9 +84,6 @@
 			<?php $logo = isset($options['logo'])? $options['logo']: ''; ?>
 			<?php if ($logo == ""){
 			
-			$hidetitle = $options['hide_title'];
-			if ($hidetitle == "No") {
-			
 				// Do not show <h1> except on home page, SEO purpose
 				if(!is_home() || !is_front_page()) { ?>
 					<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></span>
@@ -97,14 +94,13 @@
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
 					<div class="site-description"><?php bloginfo('description'); ?></div>
 				<?php }
-			}
-			
-			} else {
-				if (is_home() || is_front_page()) { ?>
-					<h1 class="logo-image"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /><span><?php bloginfo('name'); ?></span></a></h1>
-				<?php } else {  ?>
-					<div class="logo-image"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /><span><?php bloginfo('name'); ?></span></a></div>
-			<?php } } ?>
+				
+				} else {
+					if (is_home() || is_front_page()) { ?>
+						<h1 class="logo-image"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /><span><?php bloginfo('name'); ?></span></a></h1>
+					<?php } else {  ?>
+						<div class="logo-image"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /><span><?php bloginfo('name'); ?></span></a></div>
+				<?php } } ?>
 			
 		</div><!-- end #logo -->
 		

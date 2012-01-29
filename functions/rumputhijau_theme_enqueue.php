@@ -42,6 +42,8 @@ function init_styles() {
 	// register css style requirements for this theme, only!
 	if( !is_admin()){
 		
+		wp_deregister_style( 'wp-pagenavi' );
+		
 		// style
 		//wp_register_style('droidsans',     'http://fonts.googleapis.com/css?family=Droid Sans&subset=latin');
 
@@ -71,7 +73,7 @@ function footer_scripts() { ?>
 add_action('wp_footer', 'footer_scripts', 10);
 
 if (!is_admin()){
-	add_action('init', 'init_scripts', 0);
-	add_action('init', 'init_styles', 0);
+	add_action('init', 'init_scripts', 100);
+	add_action('init', 'init_styles', 100);
 }
 ?>

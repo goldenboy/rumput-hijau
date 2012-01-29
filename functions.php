@@ -6,11 +6,11 @@ if ( ! isset( $content_width ) )
 // Extra Functions
 ################################################################################
 
-require_once get_template_directory() . '/functions/rumputhijau_theme_enqueue.php'; 	// enqueue script & style
-//require_once get_template_directory() . '/functions/rumputhijau_hooks.php'; 	// hooks
-require_once get_template_directory() . '/functions/rumputhijau_theme_functions.php'; 	// theme functions
-require_once get_template_directory() . '/functions/rumputhijau_theme_extensions.php'; 	// theme extensions
+require_once get_template_directory() . '/functions/rumputhijau_theme_enqueue.php'; // enqueue script & style
+require_once get_template_directory() . '/functions/rumputhijau_theme_functions.php'; // theme functions
+require_once get_template_directory() . '/functions/rumputhijau_theme_extensions.php'; // theme extensions
 require_once get_template_directory() . '/options/rumputhijau_options.php'; // get theme options
+// require_once get_template_directory() . '/includes/metabox/metabox-image.php'; // get custom meta box
 
 
 ################################################################################

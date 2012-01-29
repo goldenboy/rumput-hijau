@@ -11,6 +11,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 	<div id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 		
+		<?php 
+		$img = get_post_meta(get_the_ID(), 'rumputhijau_meta_box_input_image', true);
+		if($img != ""):
+		?>
+			<span class="big-image">
+				<img title="<?php the_title(); ?>" src="<?php echo $img; ?>" />
+			</span>
+		<?php endif; ?>
+		
 		<div class="content-right">
 		
 			<h2 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'rumputhijau' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -88,7 +97,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div class="paging">
 	<?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else : ?>
-		<div class="prev"><?php next_posts_link( __('&laquo; Previous Posts', 'rumputhijau') ); ?></div>
-		<div class="next"><?php previous_posts_link( __('Next Posts &raquo;', 'rumputhijau') ); ?></div>
+		<div class="prev"><?php next_posts_link( __('&larr; Older posts', 'rumputhijau') ); ?></div>
+		<div class="next"><?php previous_posts_link( __('Newer posts &rarr;', 'rumputhijau') ); ?></div>
 	<?php endif; ?>
 </div><!-- end .paging -->

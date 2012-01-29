@@ -104,21 +104,6 @@ function rumputhijau_breadcrumbs() {
   }
 } // end rumputhijau_breadcrumbs()
 
-################################################################################
-// Stop more link from jumping to middle of page
-################################################################################
-
-function remove_more_jump_link($link) { 
-	$offset = strpos($link, '#more-');
-	if ($offset) {
-		$end = strpos($link, '"',$offset);
-	}
-	if ($end) {
-		$link = substr_replace($link, '', $offset, $end-$offset);
-	}
-	return $link;
-}
-add_filter('the_content_more_link', 'remove_more_jump_link');
 
 ##########################################################################################
 // Twitter Widget by Jeffrey Way - https://github.com/JeffreyWay/WordPress-Twitter-Widget

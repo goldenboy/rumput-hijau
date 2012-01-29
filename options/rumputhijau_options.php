@@ -175,8 +175,7 @@ function rumputhijau_theme_options_render_page() {
 			<ul>
 				<li><a href="#options1"><?php _e('General Options', 'rumputhijau'); ?></a></li>
 				<li><a href="#options2"><?php _e('Layout Options', 'rumputhijau'); ?></a></li>
-				<li><a href="#options3"><?php _e('Ads Options', 'rumputhijau'); ?></a></li>
-				<li><a href="#options4"><?php _e('Changelog', 'rumputhijau'); ?></a></li>
+				<li><a href="#options3"><?php _e('Changelog', 'rumputhijau'); ?></a></li>
 			</ul>
 			
 			<table id="options1" class="form-table">
@@ -204,7 +203,7 @@ function rumputhijau_theme_options_render_page() {
 				<th scope="row"><?php _e('Upload Logo:', 'rumputhijau'); ?></th>
 				<td>
 					<?php $l = isset($options['logo'])? $options['logo']: ''; ?>
-					<input id="rumputhijau_theme_options[logo]" class="regular-text logo" type="text" name="rumputhijau_theme_options[logo]" value="<?php esc_attr( $l ); ?>" />
+					<input id="rumputhijau_theme_options[logo]" class="regular-text logo" type="text" name="rumputhijau_theme_options[logo]" value="<?php esc_attr_e( $l ); ?>" />
 					<input class="upload_image_button" type="button" value="Upload Logo" />
 					<label for="logo">
 					<?php 
@@ -223,7 +222,7 @@ function rumputhijau_theme_options_render_page() {
 			<th scope="row"><label for="favicon"><?php _e('Upload Favicon :', 'rumputhijau'); ?></label></th>
 			<td>
 				<?php $fav = isset($options['favicon'])? $options['favicon']: ''; ?>
-				<input id="rumputhijau_theme_options[favicon]" class="regular-text favicon" type="text" name="rumputhijau_theme_options[favicon]" value="<?php esc_attr( $fav ); ?>" />
+				<input id="rumputhijau_theme_options[favicon]" class="regular-text favicon" type="text" name="rumputhijau_theme_options[favicon]" value="<?php esc_attr_e( $fav ); ?>" />
 				<input class="upload_favicon_button" type="button" value="Upload Favicon" />
 				<label for="favicon">
 					<?php
@@ -299,37 +298,6 @@ function rumputhijau_theme_options_render_page() {
 			</table>
 			
 			<table id="options3" class="form-table">
-			
-			<!-- Header Ad -->
-			<tr valign="top"><th scope="row"><?php _e('468x60 Header Ad :', 'rumputhijau'); ?></th>
-				<td>
-					<?php $headerad = isset($options['header-ads'])? $options['header-ads']: ''; ?>
-					<textarea id="rumputhijau_theme_options[header-ads]" class="large-text" cols="50" rows="10" name="rumputhijau_theme_options[header-ads]"><?php echo esc_textarea( $headerad ); ?></textarea>
-					<label class="description" for="rumputhijau_theme_options[header-ads]"><em><?php _e('Put your ads code here. The ads will be added in header.', 'rumputhijau'); ?></em></label>
-				</td>
-			</tr>
-			
-			<!-- Single post ad -->
-			<tr valign="top"><th scope="row"><?php _e('Single Post Ads <em>(below post title)</em> :', 'rumputhijau'); ?></th>
-				<td>
-					<?php $singletop = isset($options['single-ads-top'])? $options['single-ads-top']: ''; ?>
-					<textarea id="rumputhijau_theme_options[single-ads-top]" class="large-text" cols="50" rows="10" name="rumputhijau_theme_options[single-ads-top]"><?php echo esc_textarea( $singletop ); ?></textarea>
-					<label class="description" for="rumputhijau_theme_options[single-ads-top]"><em><?php _e('Put your ads code here. The ads will be added below post title in single post.', 'rumputhijau'); ?></em></label>
-				</td>
-			</tr>
-			
-			<!-- Single post ad -->
-			<tr valign="top"><th scope="row"><?php _e('Single Post Ads <em>(below post content)</em> :', 'rumputhijau'); ?></th>
-				<td>
-					<?php $singlebottom = isset($options['single-ads-bottom'])? $options['single-ads-bottom']: ''; ?>
-					<textarea id="rumputhijau_theme_options[single-ads-bottom]" class="large-text" cols="50" rows="10" name="rumputhijau_theme_options[single-ads-bottom]"><?php echo esc_textarea( $singlebottom ); ?></textarea>
-					<label class="description" for="rumputhijau_theme_options[single-ads-bottom]"><em><?php _e('Put your ads code here. The ads will be added below post content in single post.', 'rumputhijau'); ?></em></label>
-				</td>
-			</tr>
-			
-			</table>
-			
-			<table id="options4" class="form-table">
 				<tr valign="top">
 					<td>
 						<pre>
@@ -399,12 +367,6 @@ function rumputhijau_theme_options_validate( $input ) {
 	$output['header-script'] = stripslashes($input['header-script']);
 	
 	$output['tracking-script'] = stripslashes($input['tracking-script']);
-	
-	$output['header-ads'] = stripslashes($input['header-ads']);
-	
-	$output['single-ads-top'] = stripslashes($input['single-ads-top']);
-	
-	$output['single-ads-bottom'] = stripslashes($input['single-ads-bottom']);
 
 	return apply_filters( 'rumputhijau_theme_options_validate', $output, $input, $defaults );
 }

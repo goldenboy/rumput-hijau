@@ -21,12 +21,7 @@ function rumputhijau_add_font_stack() {
 	$font_stack = $options['font_stack']; ?>
 
 	<style type="text/css">
-		body, 
-		p, 
-		select, 
-		input, 
-		textarea, 
-		button {
+		body {
 			font-family: <?php 
 				if ( 'Georgia' == $font_stack )
 					echo 'Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;'."\n";
@@ -123,10 +118,17 @@ add_filter( 'gallery_style', 'rumputhijau_remove_gallery_css' );
 
 
 ################################################################################
-// Disabling Wp-Pagenavi Style
+// Stop more link from jumping to middle of page
 ################################################################################
 
-function my_deregister_styles() {
-	wp_deregister_style( 'wp-pagenavi' );
+function rumputhijau_remove_more_jump_link($link) { 
+	$offset = strpos($link, '#more-');
+	if ($offset) {
+		$end = strpos($link, '"',$offset);
+	}
+	if ($end) {
+		$link = substr_replace($link, '', $offset, $end-$offset);
+	}
+	return $link;
 }
-add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+add_filter('the_content_more_link', 'rumputhijau_remove_more_jump_link');

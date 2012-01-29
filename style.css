@@ -1,12 +1,11 @@
 /*
 Theme Name: 	Rumput Hijau
 Theme URI:		http://satrya.me/demo/rumput-hijau/
-Description: 
-
+Description: 	Clean and SEO optimized theme, microformats structure, breadcrumbs ready, 2 different layouts, 7 font stack, custom menu, custom header, custom body background, wordpress thumbnail and custom logo & favicon uploader. Compatible with WordPress 3.3 and above, valid XHTML & CSS, sticky posts, widget-ready, fullwidth page ready, threaded comments ready & translation ready
 Version: 		1.0.0
 Author: 		Satrya
 Author URI: 	http://satrya.me
-Tags: 			green, white, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, custom-background, custom-menu, editor-style, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments
+Tags: 			green, white, one-column, two-columns, right-sidebar, fixed-width, custom-background, custom-menu, editor-style, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready
 
 License: 		GNU General Public License v3
 License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
@@ -430,12 +429,7 @@ dd {
 
 /* =Global Fonts
 ----------------------------------------------------------------------------- */
-body,
-p,
-select,
-input,
-textarea,
-button {
+body {
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
@@ -849,6 +843,10 @@ Primary Navigation
 /* =============================================================================
 Entry Content
 ============================================================================= */
+#main-content .big-image {
+  display: block;
+  margin-bottom: 10px;
+}
 #main-content .content-right {
   display: inline;
   float: right;
