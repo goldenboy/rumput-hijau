@@ -32,7 +32,7 @@ Theme License: GNU General Public License v3 - http://www.gnu.org/licenses/gpl-3
 
 == Credit Informations ==
 
-1. Default header modified by Aris FM http:twitter.com/Aris_FM
+1. Default header modified by Aris FM http://twitter.com/Aris_FM
 
 == Changelog ==
 
