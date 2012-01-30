@@ -57,7 +57,7 @@ if ( function_exists('register_sidebar') ) {
 // Add Custom Header Functions
 ################################################################################
 define('HEADER_TEXTCOLOR', '');
-define('HEADER_IMAGE', '%s/images/default_header.jpg'); // %s is the template dir uri
+define('HEADER_IMAGE', '%s/images/default-header.jpg'); // %s is the template dir uri
 define('HEADER_IMAGE_WIDTH', 950); // use width and height appropriate for your theme
 define('HEADER_IMAGE_HEIGHT', 200);
 define('NO_HEADER_TEXT', true );

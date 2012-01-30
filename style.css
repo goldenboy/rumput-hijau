@@ -10,8 +10,38 @@ Tags: 			green, white, one-column, two-columns, right-sidebar, fixed-width, cust
 License: 		GNU General Public License v3
 License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 */
+/* 
+   Table of Contents
+   =============================================================================
+	0 - Css Reset
+	1 - Theme Base
+	2 - Layout
+		2.1 - Structure
+	3 - Typography
+		3.1 - Global Fonts
+	4 - Table
+	5 - Form
+	6 - Links
+	7 - Images
+		7.1 - Image
+		7.2 - Image Caption
+		7.3 - Gallery
+		7.4 - Attachment page
+	8 - Header
+	9 - Entry Content
+	10 - Pagination
+		10.1 - Post pages <!--nextpage-->
+		10.2 - Post navigation previous_post_link() & next_post_link() & Wp-pagenavi Custom Style
+	11 - Widget
+	12 - Comments
+	13 - Footer
+	14 - Plugins
+	15 - Miscellaneous
+	16 - Clearfix
+   =============================================================================
+*/
 /* =============================================================================
-Css Reset
+0 - Css Reset
 ============================================================================= */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -68,7 +98,7 @@ table {
 }
 
 /* =============================================================================
-Theme Base
+1 - Theme Base
 ============================================================================= */
 body {
   border-top: 5px solid #333;
@@ -86,8 +116,32 @@ body {
   padding: 0;
 }
 
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 25px;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 25px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignnone {
+  display: block;
+}
+
 /* =============================================================================
-Layout
+2 - Layout
 ============================================================================= */
 #wrapper {
   margin-bottom: 50px;
@@ -166,7 +220,7 @@ Layout
 }
 
 /* =============================================================================
-Structure Section
+2.1 - Structure
 - One column layout
 ============================================================================= */
 .one-column #primary-nav .inside-primary-nav {
@@ -210,7 +264,8 @@ Structure Section
 }
 
 /* =============================================================================
-Typography
+3 - Typography
+	3.1 - Global Fonts
 ============================================================================= */
 h1 {
   font-size: 30px;
@@ -255,103 +310,16 @@ p {
   margin: 0 0 1.5em;
 }
 
-blockquote {
-  border-left: 3px solid #eee;
-  color: #666666;
-  font-style: italic;
-  margin: 1em 40px;
-  padding-left: 15px;
-}
-blockquote em,
-blockquote i,
-blockquote cite {
-  font-style: normal;
-}
-
-em {
-  font-style: italic;
-}
-
-dfn {
-  font-style: italic;
-  font-weight: bold;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-}
-
-sup {
-  top: -0.5em;
-  vertical-align: sub;
-}
-
-sub {
-  bottom: -0.25em;
-  vertical-align: super;
-}
-
-abbr,
-acronym {
-  border-bottom: 1px dotted #666666;
-}
-
-address {
-  display: block;
-  margin: 0 0 1.5em;
-  font-style: italic;
-}
-
-del {
-  color: #666666;
-}
-
-pre {
-  background: #eee;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  margin: 1.5em 0;
-  padding: 8px 3px;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-code {
-  background: #eee;
-  font-size: 11px !important;
-  padding: 3px;
-}
-
-pre,
-code,
-tt,
-kbd,
-samp {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5;
-}
-
-li ul,
-li ol {
-  margin: 0;
-}
-
-ul,
-ol {
-  margin: 1em 0;
-  padding: 0 0 0 40px;
-}
-
 ul {
-  list-style: square;
+  list-style: disc;
+  margin-left: 7px;
+  padding: 0 0 10px 25px;
 }
 
 ol {
-  list-style-type: decimal;
+  list-style: decimal;
+  margin-left: 7px;
+  padding: 0 0 10px 25px;
 }
 
 ol ol {
@@ -366,8 +334,24 @@ ol ol ol ol {
   list-style: lower-alpha;
 }
 
-abbr[title] {
-  border-bottom: 1px dotted;
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul li,
+ol li {
+  padding: 3px 0 3px 3px;
+}
+
+hr {
+  background-color: #e6e6e6;
+  clear: both;
+  height: 1px;
+  border: 0;
+  margin: 0 0 15px;
 }
 
 b,
@@ -375,23 +359,107 @@ strong {
   font-weight: bold;
 }
 
-dfn {
+em {
   font-style: italic;
+  font-weight: 400;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+strong em, em strong {
+  font-style: italic;
+  font-weight: 700;
+}
+
+del {
+  text-decoration: line-through;
 }
 
 ins {
-  background: #ff9;
-  color: #000;
-  text-decoration: none;
+  background: #ffc;
+}
+
+pre {
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  margin: 0 0 10px;
+  overflow: auto;
+  padding: 5px;
+}
+
+code, tt {
+  background: #f5f5f5;
+  color: #666;
+  display: inline;
+  font-size: 12px;
+  line-height: 20px;
+  overflow: auto;
+  margin: 0;
+  padding: 2px 3px;
+}
+
+blockquote {
+  border-left: 3px solid #eee;
+  color: #666666;
+  font-style: italic;
+  margin: 1em 40px;
+  padding-left: 15px;
+}
+blockquote em,
+blockquote i,
+blockquote cite {
+  font-style: normal;
+}
+
+blockquote i,
+blockquote em,
+blockquote cite {
+  font-style: normal;
+}
+
+q {
+  color: #666666;
+  font-style: italic;
+}
+
+dl {
+  margin: 0 0 24px 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 18px;
+}
+
+acronym, abbr {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+sup,
+sub {
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: baseline;
+  font-size: small;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: small;
+}
+
+big {
+  font-size: large;
 }
 
 mark {
@@ -401,33 +469,7 @@ mark {
   font-weight: bold;
 }
 
-q {
-  quotes: none;
-}
-
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-small {
-  font-size: 85%;
-}
-
-dl {
-  margin: 0 1.625em;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-bottom: 1.625em;
-}
-
-/* =Global Fonts
+/* 3.1 - Global Fonts
 ----------------------------------------------------------------------------- */
 body {
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
@@ -442,23 +484,19 @@ h6 {
   font-family: Georgia,"Times New Roman",Times,serif;
 }
 
-blockquote {
-  font-family: cursive;
-}
-
 /* =============================================================================
-Table
+4 - Table
 ============================================================================= */
-table {
-  margin-bottom: 1.4em;
-  width: 100%;
+table, th, td {
+  border: 1px solid #e8e8e8;
   border-collapse: collapse;
-  border-spacing: 0;
-  border-bottom: 1px solid #ddd;
-  margin: 0 0 1.625em;
+  margin: 5px 0 10px;
+  padding: 5px 10px;
 }
 
 th {
+  background-color: #e8e8e8;
+  border-right: 1px solid #e0e0e0;
   color: #666;
   font-size: 10px;
   font-weight: 500;
@@ -468,9 +506,18 @@ th {
   text-align: left;
 }
 
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 1.625em;
+}
+
 td {
   border-top: 1px solid #ddd;
-  padding: 6px 10px 6px 0;
+  padding: 6px 10px 6px 10px;
 }
 
 table button,
@@ -479,7 +526,7 @@ table input {
 }
 
 /* =============================================================================
-Form
+5 - Form
 ============================================================================= */
 form {
   margin: 0;
@@ -623,7 +670,7 @@ input[type="checkbox"] {
 }
 
 /* =============================================================================
-Links
+6 - Links
 ============================================================================= */
 a {
   background-color: inherit;
@@ -648,101 +695,184 @@ a:link {
 }
 
 /* =============================================================================
-Images
+7 - Images
+	7.1 - Image
+	7.2 - Image Caption
+	7.3 - Gallery
+	7.4 - Attachment page
 ============================================================================= */
+/* 7.1 - Image
+-------------------------------------------------------------- */
 img {
-  width: auto\9;
-  /* ie8 */
-  max-width: 97.5%;
-  height: auto;
   -ms-interpolation-mode: bicubic;
 }
 
-.alignleft,
-img.alignleft {
-  display: inline;
-  float: left;
-  margin: 4px 24px 0 0;
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 97.5%;
+  /* Fluid images for posts, comments, and widgets */
 }
 
-.alignright,
-img.alignright {
-  display: inline;
-  float: right;
-  margin: 4px 0 0 24px;
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-.aligncenter,
-img.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+img.size-full,
+img.size-large {
+  max-width: 97.5%;
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 img.alignleft,
 img.alignright,
 img.aligncenter {
+  margin-top: 5px;
   margin-bottom: 12px;
 }
 
-.alignnone {
-  display: block;
+/* 7.2. Image Caption
+-------------------------------------------------------------- */
+p img,
+.wp-caption {
+  margin-top: 0.4em;
 }
 
 .wp-caption {
-  background: #F7F7F7;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  padding: 4px 0 5px;
-  margin-bottom: 24px;
-  max-width: 97.5%;
+  background: #eee;
+  margin-bottom: 1.625em;
+  max-width: 96%;
+  padding: 9px;
 }
 .wp-caption img {
-  border: 0;
-  margin: 0 0 5px;
-  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-width: 98%;
 }
-.wp-caption p.wp-caption-text {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 12px;
-  margin: 0;
-  padding: 0;
+.wp-caption .wp-caption-text {
+  color: #666;
+  font-size: 12px;
 }
 
-/* =Gallery
+.gallery-caption {
+  color: #666;
+  font-size: 12px;
+}
+
+.wp-caption .wp-caption-text {
+  margin-bottom: 0.6em;
+  padding: 10px 0 5px 40px;
+  position: relative;
+}
+.wp-caption .wp-caption-text:before {
+  color: #666;
+  content: '\2014';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  margin-right: 5px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+/* 7.3 - Gallery
 -------------------------------------------------------------- */
 .gallery {
   margin: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.gallery .gallery-item {
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.gallery .gallery-caption {
+  background: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  clear: both;
+  color: #888;
+  display: block;
+  font-size: 12px;
+  line-height: 1.5em;
+  margin: 10px 0;
+  padding: 5px 3px;
+  text-align: center;
+  width: 100%;
 }
 .gallery dl {
   margin: 0;
 }
 .gallery img {
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
 }
 .gallery a:hover img {
-  border-color: #CCC;
+  border-color: #ccc;
+}
+.gallery br {
+  clear: both;
 }
 .gallery br + br {
   display: none;
 }
-.gallery .gallery-item {
-  float: left;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 33%;
-}
-.gallery .gallery-caption {
-  display: block;
-  clear: both;
-  color: #888;
-  font-size: 12px;
-  margin: 0;
+
+/* available Columns */
+.gallery-columns-1 .gallery-item {
+  width: 100%;
 }
 
-/* =Attachment Page
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 33.333%;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 23%;
+  margin-right: 2%;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 18%;
+  margin-right: 2%;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 14.666%;
+  margin-right: 2%;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 12.285%;
+  margin-right: 2%;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 10.5%;
+  margin-right: 2%;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 9.111%;
+  margin-right: 2%;
+}
+
+/* 7.4 - Image Page
 -------------------------------------------------------------- */
 .attachment-navigation {
   display: inline;
@@ -758,8 +888,15 @@ p.download-image {
   text-align: center;
 }
 
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
 /* =============================================================================
-Header
+8 - Header
 ============================================================================= */
 /* =Search
 ----------------------------------------------------------------------------- */
@@ -841,7 +978,7 @@ Header
 }
 
 /* =============================================================================
-Entry Content
+9 - Entry Content
 ============================================================================= */
 #main-content .big-image {
   display: block;
@@ -948,10 +1085,96 @@ Entry Content
 }
 
 /* =============================================================================
-Widget
+10 - Pagination
 ============================================================================= */
-/* =Default WordPress Widgets Style
+/* 10.1 - Post pages <!--nextpage-->
 ----------------------------------------------------------------------------- */
+.post-pages {
+  clear: both;
+  display: block;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.post-pages a {
+  background: #73870A;
+  padding: 3px 6px;
+  color: #fff;
+}
+.post-pages a:hover {
+  background: #333;
+  text-decoration: none;
+}
+
+/* 10.2 - Post navigation previous_post_link() & next_post_link() & Wp-pagenavi Custom Style
+----------------------------------------------------------------------------- */
+.paging {
+  display: block;
+  margin: 0;
+}
+.paging .prev {
+  display: inline;
+  float: left;
+  width: 50%;
+}
+.paging .next {
+  display: inline;
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+.paging .wp-pagenavi {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0 0 15px;
+  padding: 5px 0 4px;
+}
+.paging .wp-pagenavi a:link, .paging .wp-pagenavi a:visited {
+  color: #fff;
+  border: none;
+  display: inline;
+  background: #73870A;
+  text-decoration: none;
+  margin: 0 0 0 2px;
+  padding: 7px 10px 6px!important;
+}
+.paging .wp-pagenavi .on,
+.paging .wp-pagenavi .current {
+  margin: 0 0 0 2px;
+  padding: 7px 10px 6px;
+}
+.paging .wp-pagenavi .on {
+  background: #333;
+}
+.paging .wp-pagenavi .extend,
+.paging .wp-pagenavi span.pages {
+  background: #73870A;
+  color: #fff;
+  padding: 7px 10px 6px;
+}
+.paging .wp-pagenavi .current,
+.paging .wp-pagenavi a:hover {
+  background: #333;
+  border: none;
+  color: #FFF !important;
+  text-decoration: none !important;
+}
+.paging a.scroll {
+  padding: 1px 3px;
+}
+.paging a:hover.scroll {
+  background: #73870A;
+  color: #fff;
+  text-decoration: none;
+  padding: 1px 3px;
+}
+
+.wp-pagenavi a.last {
+  margin-top: 10px;
+}
+
+/* =============================================================================
+11 - Widget
+============================================================================= */
 .widget {
   margin-bottom: 20px;
   overflow: hidden;
@@ -967,6 +1190,9 @@ Widget
 .widget ul {
   list-style: none outside none;
   margin: 0;
+  padding: 0;
+}
+.widget ul li {
   padding: 0;
 }
 .widget ul li a {
@@ -1122,28 +1348,26 @@ Widget
 }
 
 /* =============================================================================
-Comments
+12 - Comments
 ============================================================================= */
-/* =Comments
--------------------------------------------------------------- */
+/* Comment Form */
+.comments-box {
+  padding: 10px 0 0;
+}
+.comments-box .comments-heading {
+  border: none;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
 #respond {
   margin: 15px 0;
   padding: 10px 0;
-  zoom: 1;
 }
-#respond:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-#respond:after, #respond:before {
-  content: "";
-  display: table;
-}
-
 #respond p {
   color: #666;
   margin: 0 0 15px;
@@ -1152,17 +1376,14 @@ Comments
 #commentform {
   margin: 10px 0 0;
 }
-
 #commentform label {
   font-size: 12px;
   line-height: 28px;
 }
-
 #commentform input
-#commentform textarea {
+textarea {
   border: 1px solid #ddd;
 }
-
 #commentform input {
   display: inline;
   float: left;
@@ -1171,15 +1392,16 @@ Comments
   padding: 5px 7px;
   width: 170px;
 }
-
 #commentform textarea {
   line-height: 25px;
   padding: 7px;
   width: 97%;
 }
-
 #commentform input[type="submit"] {
   padding: 10px 15px;
+}
+#commentform .required {
+  color: #f00;
 }
 
 .reply {
@@ -1197,23 +1419,9 @@ Comments
   padding: 1px 10px;
 }
 
-.comments-box {
-  padding: 10px 0 0;
-}
-
-.comments-box .comments-heading {
-  border: none;
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
-  font-family: Georgia,"Times New Roman",Times,serif;
-  line-height: 1.5em;
-  margin: 0;
-  padding: 0;
-}
-
 p.comment-notes {
   font-size: 11px;
+  line-height: 20px;
 }
 
 a#cancel-comment-reply-link {
@@ -1221,15 +1429,6 @@ a#cancel-comment-reply-link {
   margin-top: 10px;
   padding: 0 5px;
   width: auto;
-}
-
-cite.fn {
-  font-size: 14px;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -0.05em;
-  display: block;
-  padding-top: 0;
 }
 
 .text {
@@ -1295,37 +1494,23 @@ span.says {
   border: 1px solid #e9e9e9;
   background: #FFF;
 }
-.commentlist li #respond #comment_policy_display,
-.commentlist li #respond .info {
-  display: none;
+.commentlist li.depth-2, .commentlist li.depth-3, .commentlist li.depth-4, .commentlist li.depth-5 {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  color: inherit;
+  margin-top: 40px;
 }
 .commentlist li.depth-2 {
   background: #ffffff;
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  color: inherit;
-  margin-top: 40px;
 }
 .commentlist li.depth-3 {
   background: #fafafa;
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  color: inherit;
-  margin-top: 40px;
 }
 .commentlist li.depth-4 {
   background: #ffffff;
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  color: inherit;
-  margin-top: 40px;
 }
 .commentlist li.depth-5 {
   background: #fafafa;
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  color: inherit;
-  margin-top: 40px;
 }
 .commentlist code {
   background: #e6e6e6;
@@ -1380,41 +1565,34 @@ span.says {
 
 .comment-body ul {
   list-style: disc;
-  margin: 0 0 18px 10px;
-  padding: 0 0 0 10px;
 }
 .comment-body ol {
   list-style: decimal;
-  margin: 0 0 18px 10px;
-  padding: 0 0 0 10px;
 }
 .comment-body li {
+  background: none;
   list-style: disc;
-  margin: 0 0 0 15px;
   padding: 0;
   border: none;
 }
 .comment-body ol li {
   list-style: decimal;
 }
-.comment-body ol ol {
+.comment-body ol ol li {
   list-style: upper-alpha;
 }
-.comment-body ol ol ol {
+.comment-body ol ol ol li {
   list-style: lower-roman;
 }
-.comment-body ol ol ol ol {
+.comment-body ol ol ol ol li {
   list-style: lower-alpha;
 }
-.comment-body ul ul,
-.comment-body ol ol,
-.comment-body ul ol,
-.comment-body ol ul {
+.comment-body ul ul, .comment-body ol ol, .comment-body ul ol, .comment-body ol ul {
   margin-bottom: 0;
 }
 
 /* =============================================================================
-Footer
+13 - Footer
 ============================================================================= */
 #footer {
   background-color: #73870A;
@@ -1469,7 +1647,7 @@ Footer
 }
 
 /* =============================================================================
-Plugins
+14 - Plugins
 ============================================================================= */
 /* =Primary Navigation - Superfish
 ----------------------------------------------------------------------------- */
@@ -1625,92 +1803,8 @@ li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator {
 }
 
 /* =============================================================================
-Miscellaneous
+15 - Miscellaneous
 ============================================================================= */
-/* =Post pages
------------------------------------------------------------------------------ */
-.post-pages {
-  display: block;
-  text-align: center;
-  margin-bottom: 22px;
-}
-.post-pages a {
-  background: #73870A;
-  padding: 3px 6px;
-  color: #fff;
-}
-.post-pages a:hover {
-  background: #333;
-  text-decoration: none;
-}
-
-/* =Post Paging & Wp-pagenavi Custom Style
------------------------------------------------------------------------------ */
-.paging {
-  display: block;
-  margin: 0;
-}
-.paging .prev {
-  display: inline;
-  float: left;
-  width: 50%;
-}
-.paging .next {
-  display: inline;
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-.paging .wp-pagenavi {
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0 0 15px;
-  padding: 5px 0 4px;
-}
-.paging .wp-pagenavi a:link, .paging .wp-pagenavi a:visited {
-  color: #fff;
-  border: none;
-  display: inline;
-  background: #73870A;
-  text-decoration: none;
-  margin: 0 0 0 2px;
-  padding: 7px 10px 6px!important;
-}
-.paging .wp-pagenavi .on,
-.paging .wp-pagenavi .current {
-  margin: 0 0 0 2px;
-  padding: 7px 10px 6px;
-}
-.paging .wp-pagenavi .on {
-  background: #333;
-}
-.paging .wp-pagenavi .extend,
-.paging .wp-pagenavi span.pages {
-  background: #73870A;
-  color: #fff;
-  padding: 7px 10px 6px;
-}
-.paging .wp-pagenavi .current,
-.paging .wp-pagenavi a:hover {
-  background: #333;
-  border: none;
-  color: #FFF !important;
-  text-decoration: none !important;
-}
-.paging a.scroll {
-  padding: 1px 3px;
-}
-.paging a:hover.scroll {
-  background: #73870A;
-  color: #fff;
-  text-decoration: none;
-  padding: 1px 3px;
-}
-
-.wp-pagenavi a.last {
-  margin-top: 10px;
-}
-
 /* =Breadcrumbs
 ----------------------------------------------------------------------------- */
 #breadcrumbs {
@@ -1778,12 +1872,11 @@ Miscellaneous
 }
 
 /* =============================================================================
-Clearfix
+16 - Clearfix
 ============================================================================= */
 .clearfix {
   zoom: 1;
 }
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -1792,9 +1885,7 @@ Clearfix
   line-height: 0;
   height: 0;
 }
-
-.clearfix:after,
-.clearfix:before {
+.clearfix:after, .clearfix:before {
   content: "";
   display: table;
 }
