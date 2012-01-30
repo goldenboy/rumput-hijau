@@ -28,8 +28,11 @@ Activiation and Use
 
 == License Information ==
 
-License: 		GNU General Public License v3
-License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+Theme License: GNU General Public License v3 - http://www.gnu.org/licenses/gpl-3.0.html
+
+== Credit Informations ==
+
+1. Default header modified by Aris FM <a href="http:twitter.com/Aris_FM">@Aris_FM</a>
 
 == Changelog ==
 
