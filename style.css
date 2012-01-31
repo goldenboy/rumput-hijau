@@ -535,7 +535,7 @@ form {
 input[type=text],
 input[type=password],
 textarea {
-  background: #eee;
+  background: #fafafa;
   border: 1px solid #ddd;
   color: #333;
   padding: 5px;
@@ -1387,7 +1387,6 @@ textarea {
 #commentform input {
   display: inline;
   float: left;
-  clear: both;
   margin: 0 5px 10px 0;
   padding: 5px 7px;
   width: 170px;

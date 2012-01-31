@@ -1,0 +1,15 @@
+/* IE 9 */
+.commentlist .avatar {
+  width: 48px;
+}
+
+/* IE 7 */
+.commentlist .avatar {
+  display: inline;
+  float: left;
+}
+
+cite.fn {
+  display: inline;
+  float: left;
+}

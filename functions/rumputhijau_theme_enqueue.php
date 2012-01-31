@@ -76,4 +76,14 @@ if (!is_admin()){
 	add_action('init', 'init_scripts', 100);
 	add_action('init', 'init_styles', 100);
 }
-?>
+
+
+################################################################################
+// IE Style
+################################################################################
+function ie_style() {?>
+	<!--[if gte IE 7]>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie.css" media="screen" />
+	<![endif]-->
+<?php }
+add_action('wp_head', 'ie_style', 100);
